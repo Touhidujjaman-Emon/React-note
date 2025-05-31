@@ -13,6 +13,10 @@
 - [State Management](#state-management)
 - [Context API](#context-api)
 - [Hooks](#hooks)
+- [React Router](#react-router)
+- [Thinking in React Components](#thinking-in-react-components)
+- [Effect and Data Fetching](#effect-and-data-fetching)
+- [DevTrack (from travel-list)](#devtrack-from-travel-list)
 
 ---
 
@@ -501,4 +505,192 @@ function DateCounter() {
 
 ---
 
-_End of React.js Notes_
+## React Router
+
+### React Routing
+
+![alt text](worldwise/react-routing.png)
+
+#### Basic Router Setup
+
+```jsx
+// Root router setup example from App.jsx
+<BrowserRouter>
+  <Routes>
+    <Route index element={<Homepage />} />
+    <Route path="product" element={<Product />} />
+    <Route path="app" element={<AppLayout />}>
+      {/* Nested routes */}
+      <Route index element={<Navigate replace to="cities" />} />
+      <Route path="cities" element={<CityList />} />
+    </Route>
+  </Routes>
+</BrowserRouter>
+```
+
+### Navigation Components
+
+1. **Link Component**: Basic navigation
+
+```jsx
+// Example from Homepage.jsx
+<Link to="/app" className="cta">
+  Start tracking now
+</Link>
+```
+
+2. **NavLink Component**: Navigation with active state
+
+```jsx
+// Example from PageNav.jsx
+<NavLink to="/pricing">Pricing</NavLink>
+```
+
+### SPA (Single Page Application)
+
+![alt text](worldwise/single-page-app.png)
+
+Single Page Applications use client-side routing to render different views without full page reloads.
+
+### URL for State Management
+
+![alt text](worldwise/url-state-management.png)
+
+Using URLs for state management helps with:
+
+- Bookmarking
+- Sharing links
+- Browser history
+- SEO
+
+### Params & Query String
+
+![alt text](worldwise/params-query-string.png)
+
+- **URL Parameters**: Used for essential data (e.g., IDs)
+- **Query Strings**: Used for optional data (e.g., filters, coordinates)
+
+### Best Practices
+
+1. Use nested routes for related views
+2. Implement 404 handling with catch-all routes
+3. Use NavLink for navigation with active states
+4. Keep URLs clean and semantic
+5. Use proper route organization
+
+---
+
+## Thinking in React Components
+
+### How to split a component
+
+![How to split a component](use-popcorn/how to split a component.png)
+
+### When to create new components
+
+![When to create new components](use-popcorn/when-to-create-a-new-components.png)
+
+### General components guideline
+
+![General components guideline](use-popcorn/general-components-guideline.png)
+
+### Different Size and Reusability
+
+![Different Size and Reusability](use-popcorn/differentSize-and-Reusability.png)
+
+### What is component Composition
+
+![what is composition](use-popcorn/what-is-composition.png)
+
+---
+
+## Effect and Data Fetching
+
+### Component lifecycle
+
+![alt text](use-popcorn/component-lifeCycle.png)
+
+### Event handler vs effect
+
+![alt text](use-popcorn/eventHandler-vs-effect.png)
+
+### Dependency array
+
+![alt text](use-popcorn/dependency-array.png)
+
+### useEffects synchronize mechanism
+
+![alt text](use-popcorn/use-effect-synchronize-mechanism.png)
+
+### Synchronization and lifeCycle
+
+![alt text](use-popcorn/synchronization-and-lifeCycle.png)
+
+### When Effect are executed
+
+![alt text](use-popcorn/when-are-effect-executed.png)
+
+### Effect synchronization
+
+```js
+useEffect(function () {
+  console.log("initial render");
+}, []);
+
+useEffect(function () {
+  console.log("after every render");
+});
+
+useEffect(
+  function () {
+    console.log("synchronized with query (prop/state)");
+  },
+  [query]
+);
+```
+
+### useEffect CleanUp function
+
+![alt text](use-popcorn/use-Effect-clean-up-fn.png)
+
+#### CleanUp data fetching with **Abort controller**
+
+```js
+useEffect(
+  function () {
+    const controller = new AbortController();
+    async function fetchData() {
+      try {
+        setIsLoading(true);
+        setError("");
+
+        const response = await fetch(
+          `https://www.omdbapi.com/?s=${query}&apikey=${KEY}`,
+          { signal: controller.signal }
+        );
+
+        if (!response.ok) throw new Error("Error fetching movies");
+
+        const data = await response.json();
+
+        if (data.Response === "False") throw new Error("Movie not found");
+        setMovies(data.Search);
+
+        setError("");
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          setError(error.message);
+        }
+      }
+      setIsLoading(false);
+    }
+    fetchData();
+    return function () {
+      controller.abort();
+    };
+  },
+  [query]
+);
+```
+
+---
