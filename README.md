@@ -16,7 +16,6 @@
 - [React Router](#react-router)
 - [Thinking in React Components](#thinking-in-react-components)
 - [Effect and Data Fetching](#effect-and-data-fetching)
-- [DevTrack (from travel-list)](#devtrack-from-travel-list)
 
 ---
 
@@ -157,7 +156,7 @@ function Header() {
 
 ## Components
 
-![Components](pizza-menu/about components.png)
+![Components](pizza-menu/about%20components.png)
 
 - The first letter of a component name should be capitalized
 - Function needs to return some markup (JSX) or null.
@@ -190,7 +189,7 @@ AppComponent
   └── Footer
 ```
 
-![components tree](pizza-menu/components tree.png)
+![components tree](pizza-menu/components%20tree.png)
 
 ---
 
@@ -320,7 +319,7 @@ const handlePrevious = function(){
 
 ### When and where to create state
 
-![When and where to create state](state-management/when&where-crerate-state+.png)
+![When and where to create state](state-management/when%26where-crerate-state%2B.png)
 
 ---
 
@@ -584,7 +583,7 @@ Using URLs for state management helps with:
 
 ### How to split a component
 
-![How to split a component](use-popcorn/how to split a component.png)
+![How to split a component](use-popcorn/how%20to%20split%20a%20component.png)
 
 ### When to create new components
 
