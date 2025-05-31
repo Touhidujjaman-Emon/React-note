@@ -508,19 +508,19 @@ function DateCounter() {
 
 ### React Routing
 
-![alt text](react theory ss/react-routing.png)
+![alt text](react%20theory%20ss/react-routing.png)
 
 ### SPA (Single Page Application)
 
-![alt text](react theory ss/single-page-app.png)
+![alt text](react%20theory%20ss/single-page-app.png)
 
 ### URL for State Management
 
-![alt text](react theory ss/url-state-management.png)
+![alt text](react%20theory%20ss/url-state-management.png)
 
 ### Params & Query String
 
-![alt text](react theory ss/params-query-string.png)
+![alt text](react%20theory%20ss/params-query-string.png)
 
 - **URL Parameters**: Used for essential data (e.g., IDs)
 - **Query Strings**: Used for optional data (e.g., filters, coordinates)
@@ -539,23 +539,23 @@ function DateCounter() {
 
 ### How to split a component
 
-![How to split a component](react theory ss/how%20to%20split%20a%20component.png)
+![How to split a component](react%20theory%20ss/how%20to%20split%20a%20component.png)
 
 ### When to create new components
 
-![When to create new components](react theory ss/when-to-create-a-new-components.png)
+![When to create new components](react%20theory%20ss/when-to-create-a-new-components.png)
 
 ### General components guideline
 
-![General components guideline](react theory ss/general-components-guideline.png)
+![General components guideline](react%20theory%20ss/general-components-guideline.png)
 
 ### Different Size and Reusability
 
-![Different Size and Reusability](react theory ss/differentSize-and-Reusability.png)
+![Different Size and Reusability](react%20theory%20ss/differentSize-and-Reusability.png)
 
 ### What is component Composition
 
-![what is composition](react theory ss/what-is-composition.png)
+![what is composition](react%20theory%20ss/what-is-composition.png)
 
 ---
 
@@ -563,31 +563,31 @@ function DateCounter() {
 
 ### Component lifecycle
 
-![alt text](react theory ss/component-lifeCycle.png)
+![alt text](react%20theory%20ss/component-lifeCycle.png)
 
 ### Event handler vs effect
 
-![alt text](react theory ss/eventHandler-vs-effect.png)
+![alt text](react%20theory%20ss/eventHandler-vs-effect.png)
 
 ### Dependency array
 
-![alt text](react theory ss/dependency-array.png)
+![alt text](react%20theory%20ss/dependency-array.png)
 
 ### useEffects synchronize mechanism
 
-![alt text](react theory ss/use-effect-synchronize-mechanism.png)
+![alt text](react%20theory%20ss/use-effect-synchronize-mechanism.png)
 
 ### Synchronization and lifeCycle
 
-![alt text](react theory ss/synchronization-and-lifeCycle.png)
+![alt text](react%20theory%20ss/synchronization-and-lifeCycle.png)
 
 ### When Effect are executed
 
-![alt text](react theory ss/when-are-effect-executed.png)
+![alt text](react%20theory%20ss/when-are-effect-executed.png)
 
 ### useEffect CleanUp function
 
-![alt text](react theory ss/use-Effect-clean-up-fn.png)
+![alt text](react%20theory%20ss/use-Effect-clean-up-fn.png)
 
 #### CleanUp data fetching with **Abort controller**
 
