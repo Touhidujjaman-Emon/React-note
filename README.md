@@ -510,57 +510,13 @@ function DateCounter() {
 
 ![alt text](worldwise/react-routing.png)
 
-#### Basic Router Setup
-
-```jsx
-// Root router setup example from App.jsx
-<BrowserRouter>
-  <Routes>
-    <Route index element={<Homepage />} />
-    <Route path="product" element={<Product />} />
-    <Route path="app" element={<AppLayout />}>
-      {/* Nested routes */}
-      <Route index element={<Navigate replace to="cities" />} />
-      <Route path="cities" element={<CityList />} />
-    </Route>
-  </Routes>
-</BrowserRouter>
-```
-
-### Navigation Components
-
-1. **Link Component**: Basic navigation
-
-```jsx
-// Example from Homepage.jsx
-<Link to="/app" className="cta">
-  Start tracking now
-</Link>
-```
-
-2. **NavLink Component**: Navigation with active state
-
-```jsx
-// Example from PageNav.jsx
-<NavLink to="/pricing">Pricing</NavLink>
-```
-
 ### SPA (Single Page Application)
 
 ![alt text](worldwise/single-page-app.png)
 
-Single Page Applications use client-side routing to render different views without full page reloads.
-
 ### URL for State Management
 
 ![alt text](worldwise/url-state-management.png)
-
-Using URLs for state management helps with:
-
-- Bookmarking
-- Sharing links
-- Browser history
-- SEO
 
 ### Params & Query String
 
@@ -628,25 +584,6 @@ Using URLs for state management helps with:
 ### When Effect are executed
 
 ![alt text](use-popcorn/when-are-effect-executed.png)
-
-### Effect synchronization
-
-```js
-useEffect(function () {
-  console.log("initial render");
-}, []);
-
-useEffect(function () {
-  console.log("after every render");
-});
-
-useEffect(
-  function () {
-    console.log("synchronized with query (prop/state)");
-  },
-  [query]
-);
-```
 
 ### useEffect CleanUp function
 
