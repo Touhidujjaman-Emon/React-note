@@ -508,19 +508,19 @@ function DateCounter() {
 
 ### React Routing
 
-![alt text](worldwise/react-routing.png)
+![alt text](react theory ss/react-routing.png)
 
 ### SPA (Single Page Application)
 
-![alt text](worldwise/single-page-app.png)
+![alt text](react theory ss/single-page-app.png)
 
 ### URL for State Management
 
-![alt text](worldwise/url-state-management.png)
+![alt text](react theory ss/url-state-management.png)
 
 ### Params & Query String
 
-![alt text](worldwise/params-query-string.png)
+![alt text](react theory ss/params-query-string.png)
 
 - **URL Parameters**: Used for essential data (e.g., IDs)
 - **Query Strings**: Used for optional data (e.g., filters, coordinates)
