@@ -120,8 +120,6 @@
 
 ## JSX
 
-<!-- Content and images from pizza-menu/README.md -->
-
 ### JSX (JavaScript XML)
 
 ![JavaScript XML](pizza-menu/JSX.png)
@@ -504,5 +502,3 @@ function DateCounter() {
 ---
 
 _End of React.js Notes_
-#   R e a c t - n o t e  
- 
